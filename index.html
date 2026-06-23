@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Lakshmi &amp; Vikram | Wedding Invitation</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Cinzel:wght@500;600;700;900&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Noto+Serif+Kannada:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap 5.3 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<!-- AOS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ PREMIUM LOADER ============ -->
+<div id="loader">
+  <div class="loader-inner">
+    <!-- Romantic heart loader replacing mandala -->
+    <div class="loader-heart-wrap">
+      <div class="loader-heart">&#10084;</div>
+      <div class="loader-petals">
+        <span>🌸</span><span>🌺</span><span>🌸</span><span>🌺</span><span>🌸</span><span>🌺</span>
+      </div>
+    </div>
+    <p class="loader-text" data-en="Inviting with love...">Inviting with love...</p>
+  </div>
+</div>
+
+<!-- floating hearts canvas -->
+<canvas id="particles"></canvas>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg fixed-top luxury-navbar" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="#hero">
+      <span class="brand-heart">💕</span>
+      <span class="brand-text">L<span class="amp">&amp;</span>V</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <i class="bi bi-list"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="#hero"   data-en="Home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#couple" data-en="Couple">Couple</a></li>
+        <li class="nav-item"><a class="nav-link" href="#details" data-en="Details">Details</a></li>
+        <li class="nav-item"><a class="nav-link" href="#venue"  data-en="Venue">Venue</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery" data-en="Gallery">Gallery</a></li>
+        <li class="nav-item ms-lg-3">
+          <div class="lang-switch" id="langSwitch">
+            <button class="lang-btn active" data-lang="kn">ಕನ್ನಡ</button>
+            <span class="lang-sep">|</span>
+            <button class="lang-btn" data-lang="en">English</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header id="hero" class="hero-section">
+  <div class="hero-bg"></div>
+  <!-- Soft petal bg animation -->
+  <div class="petal-bg-anim"></div>
+
+  <div class="hero-content text-center">
+
+    <!-- Floral top ornament -->
+    <div class="floral-ornament top-ornament" data-aos="fade-down" data-aos-duration="1200">
+      🌸 ✿ 🌸
+    </div>
+
+    <p class="hero-eyebrow" data-aos="fade-up" data-aos-delay="200"
+       data-kn="ಶ್ರೀ ಗಣೇಶಾಯ ನಮಃ" data-en="Sri Ganeshaya Namah">ಶ್ರೀ ಗಣೇಶಾಯ ನಮಃ</p>
+
+    <h1 class="hero-bride-name" data-aos="zoom-in"
+        data-kn="ಲಕ್ಷ್ಮಿ" data-en="LAKSHMI" data-aos-delay="300">LAKSHMI</h1>
+    <p class="hero-nickname" data-aos="fade-up"
+       data-kn="(ಅಶ್ವಿನಿ)" data-en="(Ashwini)" data-aos-delay="450"><b>(Ashwini)</b></p>
+
+    <!-- Floral divider with hearts -->
+    <div class="hero-divider" data-aos="fade" data-aos-delay="550">
+      <span class="divider-line"></span>
+      <span class="divider-heart">💕</span>
+      <span class="divider-line"></span>
+    </div>
+
+    <h2 class="hero-groom-name" data-aos="zoom-in"
+        data-kn="ವಿಕ್ರಮ್" data-en="VIKRAM" data-aos-delay="300">VIKRAM</h2>
+
+    <div class="hero-meta" data-aos="fade-up" data-aos-delay="800">
+      <span class="meta-date"><i class="bi bi-calendar-heart"></i>
+        <span data-kn="೨೫ ಅಕ್ಟೋಬರ್ ೨೦೨೬" data-en="25 October 2026">೨೫ ಅಕ್ಟೋಬರ್ ೨೦೨೬</span>
+      </span>
+      <span class="meta-dot">🌸</span>
+      <span class="meta-time"><i class="bi bi-clock"></i>
+        <span data-kn="ಬೆಳಗ್ಗೆ ೧೧:೦೨" data-en="11:02 AM">ಬೆಳಗ್ಗೆ ೧೧:೦೨</span>
+      </span>
+    </div>
+
+    <!-- Floral bottom ornament (replaces dot deco) -->
+    <div class="floral-dots" data-aos="fade-up" data-aos-delay="950">
+      <span>🌺</span><span>💗</span><span>🌸</span><span>💗</span><span>🌺</span>
+    </div>
+  </div>
+
+  <div class="scroll-explore" data-aos="fade-in" data-aos-delay="1400">
+    <span data-en="Scroll to Explore">Scroll to Explore</span>
+    <div class="scroll-line"><div class="scroll-dot"></div></div>
+  </div>
+</header>
+
+<!-- ============ COUNTDOWN ============ -->
+<section class="countdown-section">
+  <div class="container">
+    <!-- Floral section divider -->
+    <div class="floral-section-divider" data-aos="fade-up">
+      <span class="fsd-line"></span>
+      <span class="fsd-icon">🌸</span>
+      <span class="fsd-line"></span>
+    </div>
+    <p class="section-eyebrow text-center" data-aos="fade-up"
+       data-kn="ಶುಭ ಮುಹೂರ್ತಕ್ಕೆ" data-en="Counting Down To The Sacred Moment">ಶುಭ ಮುಹೂರ್ತಕ್ಕೆ</p>
+    <div class="row g-3 g-md-4 justify-content-center countdown-row" data-aos="fade-up" data-aos-delay="150">
+      <div class="col-3 col-md-2">
+        <div class="count-card">
+          <div class="count-num" id="cd-days">00</div>
+          <div class="count-label" data-kn="ದಿನಗಳು" data-en="Days">ದಿನಗಳು</div>
+        </div>
+      </div>
+      <div class="col-3 col-md-2">
+        <div class="count-card">
+          <div class="count-num" id="cd-hours">00</div>
+          <div class="count-label" data-kn="ಗಂಟೆ" data-en="Hours">ಗಂಟೆ</div>
+        </div>
+      </div>
+      <div class="col-3 col-md-2">
+        <div class="count-card">
+          <div class="count-num" id="cd-mins">00</div>
+          <div class="count-label" data-kn="ನಿಮಿಷ" data-en="Minutes">ನಿಮಿಷ</div>
+        </div>
+      </div>
+      <div class="col-3 col-md-2">
+        <div class="count-card">
+          <div class="count-num" id="cd-secs">00</div>
+          <div class="count-label" data-kn="ಸೆಕೆಂಡ್" data-en="Seconds">ಸೆಕೆಂಡ್</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INVITATION ============ -->
+<section class="invitation-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center" data-aos="fade-up">
+
+        <div class="floral-section-divider">
+          <span class="fsd-line"></span>
+          <span class="fsd-icon">💕</span>
+          <span class="fsd-line"></span>
+        </div>
+
+        <h3 class="section-title"
+            data-kn="ಆಹ್ವಾನ"
+            data-en="Wedding Invitation">
+            ಆಹ್ವಾನ
+        </h3>
+
+        <p class="invitation-text"
+           data-kn="ಹಿರಿಯರ ಆಶೀರ್ವಾದದೊಂದಿಗೆ,
+
+ನಮ್ಮ ಪ್ರೀತಿಯ ಲಕ್ಷ್ಮಿ ಮತ್ತು ವಿಕ್ರಮ್ ಅವರ
+ಶುಭ ವಿವಾಹ ಸಮಾರಂಭಕ್ಕೆ
+
+ತಮ್ಮ ಕುಟುಂಬ ಸಮೇತ ಆಗಮಿಸಿ
+ನವದಂಪತಿಗಳನ್ನು ಆಶೀರ್ವದಿಸಬೇಕಾಗಿ
+ಪ್ರೀತಿಯ ಆಮಂತ್ರಣ.
+
+ನಿಮ್ಮ ಉಪಸ್ಥಿತಿಯೇ
+ನಮ್ಮ ಸಂತೋಷ."
+
+           data-en="With the blessings of the Almighty and our beloved elders, we cordially invite you and your family to grace the wedding ceremony of our beloved daughter Lakshmi and Vikram. Your presence and blessings will make this joyous occasion truly memorable and add to our happiness.">
+
+          ಹಿರಿಯರ ಆಶೀರ್ವಾದದೊಂದಿಗೆ,
+
+ನಮ್ಮ ಪ್ರೀತಿಯ ಲಕ್ಷ್ಮಿ ಮತ್ತು ವಿಕ್ರಮ್ ಅವರ
+ಶುಭ ವಿವಾಹ ಸಮಾರಂಭಕ್ಕೆ
+
+ತಮ್ಮ ಕುಟುಂಬ ಸಮೇತ ಆಗಮಿಸಿ
+ನವದಂಪತಿಗಳನ್ನು ಆಶೀರ್ವದಿಸಬೇಕಾಗಿ
+ಪ್ರೀತಿಯ ಆಮಂತ್ರಣ.
+
+ನಿಮ್ಮ ಉಪಸ್ಥಿತಿಯೇ
+ನಮ್ಮ ಸಂತೋಷ.
+        </p>
+
+        <div class="invited-by">
+          <span data-kn="ಪ್ರೀತಿಯಿಂದ" data-en="With Best Compliments">ಪ್ರೀತಿಯಿಂದ</span>
+          <br>
+          <strong data-kn="ಕುಟುಂಬದವರು " data-en="Family of Lakshmi">ಕುಟುಂಬದವರು </strong>
+        </div>
+
+        <div class="floral-section-divider">
+          <span class="fsd-line"></span>
+          <span class="fsd-icon">🌸</span>
+          <span class="fsd-line"></span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COUPLE SECTION ============ -->
+<section id="couple" class="couple-section">
+  <div class="container">
+    <p class="section-eyebrow text-center" data-aos="fade-up"
+       data-kn="ವಧು 💕 ವರ" data-en="The Bride 💕 Groom">ವಧು 💕 ವರ</p>
+    <h3 class="section-title text-center" data-aos="fade-up" data-en="Our Story, United"></h3>
+
+    <div class="row g-4 justify-content-center align-items-center mt-4">
+      <div class="col-md-5" data-aos="fade-right">
+        <div class="couple-card bride-card">
+          <div class="couple-photo">
+            <i class="bi bi-flower2"></i>
+          </div>
+          <h4 class="couple-name">Lakshmi <span class="nickname-tag">(Ashwini)</span></h4>
+          <p class="couple-role" data-kn="ವಧು" data-en="The Bride">ವಧು</p>
+        </div>
+      </div>
+
+      <div class="col-md-2 text-center" data-aos="zoom-in" data-aos-delay="200">
+        <div class="couple-connector">
+          💕
+        </div>
+      </div>
+
+      <div class="col-md-5" data-aos="fade-left">
+        <div class="couple-card groom-card">
+          <div class="couple-photo">
+            <i class="bi bi-flower1"></i>
+          </div>
+          <h4 class="couple-name">Vikram</h4>
+          <p class="couple-role" data-kn="ವರ" data-en="The Groom">ವರ</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WEDDING DETAILS ============ -->
+<section id="details" class="details-section">
+  <div class="container">
+
+    <div class="floral-section-divider" data-aos="fade-up">
+      <span class="fsd-line"></span>
+      <span class="fsd-icon">🌺</span>
+      <span class="fsd-line"></span>
+    </div>
+
+    <p class="section-eyebrow text-center" data-aos="fade-up"
+       data-kn="ವಿವರಗಳು" data-en="Wedding Details">ವಿವರಗಳು</p>
+    <h3 class="section-title text-center" data-aos="fade-up"
+        data-kn="ಶುಭ ಸಮಾರಂಭ" data-en="The Sacred Ceremony">ಶುಭ ಸಮಾರಂಭ</h3>
+
+    <div class="row g-4 mt-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="detail-card">
+          <i class="bi bi-calendar-heart"></i>
+          <h5 data-kn="ದಿನಾಂಕ" data-en="Date">ದಿನಾಂಕ</h5>
+          <p data-kn="೨೫ ಅಕ್ಟೋಬರ್ ೨೦೨೬" data-en="25 October 2026">೨೫ ಅಕ್ಟೋಬರ್ ೨೦೨೬</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="250">
+        <div class="detail-card">
+          <i class="bi bi-clock-history"></i>
+          <h5 data-kn="ಸಮಯ" data-en="Time">ಸಮಯ</h5>
+          <p data-kn="ಬೆಳಗ್ಗೆ ೧೧:೦೨" data-en="11:02 AM">ಬೆಳಗ್ಗೆ ೧೧:೦೨</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="detail-card">
+          <i class="bi bi-bank2"></i>
+          <h5 data-kn="ಸ್ಥಳ" data-en="Venue">ಸ್ಥಳ</h5>
+          <p data-kn="ಶ್ರೀ ಲಲಿತಾ ಭದ್ರಕಾಳಿ ದೇವಸ್ಥಾನ, ದೇವತೆಮನೆ ಸಿರ್ಸಿ" data-en="Shree Lalita Bhadrakali Temple, Sirsi">ಶ್ರೀ ಲಲಿತಾ ಭದ್ರಕಾಳಿ ದೇವಸ್ಥಾನ, ದೇವತೆಮನೆ ಸಿರ್ಸಿ</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VENUE ============ -->
+<section id="venue" class="venue-section">
+  <div class="venue-pattern"></div>
+  <div class="container">
+    <p class="section-eyebrow text-center" data-aos="fade-up"
+       data-kn="ಸ್ಥಳ" data-en="Venue">ಸ್ಥಳ</p>
+    <h3 class="section-title text-center" data-aos="fade-up"
+        data-kn="ಶ್ರೀ ಲಲಿತಾ ಭದ್ರಕಾಳಿ ದೇವಸ್ಥಾನ, ದೇವತೆಮನೆ"
+        data-en="Shree Lalita Bhadrakali Temple, Devatemane">ಶ್ರೀ ಲಲಿತಾ ಭದ್ರಕಾಳಿ ದೇವಸ್ಥಾನ, ದೇವತೆಮನೆ</h3>
+
+    <div class="row justify-content-center mt-4">
+      <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="venue-card">
+          <div class="venue-icon"><i class="bi bi-geo-alt-fill"></i></div>
+          <p class="venue-address">
+            Lalita Bhadrakali Temple<br>
+            Devatemane, Sirsi<br>
+            Uttara Kannada, Karnataka
+          </p>
+          <a href="https://maps.app.goo.gl/vnhEj4TWxG7MitvC8" target="_blank" rel="noopener" class="btn btn-rose-outline mt-3">
+            <i class="bi bi-map"></i> <span data-en="Click for Location">Click for Location</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="gallery-section">
+  <div class="container">
+
+    <div class="floral-section-divider" data-aos="fade-up">
+      <span class="fsd-line"></span>
+      <span class="fsd-icon">💖</span>
+      <span class="fsd-line"></span>
+    </div>
+
+    <p class="section-eyebrow text-center" data-aos="fade-up" data-en="Gallery">Gallery</p>
+    <h3 class="section-title text-center" data-aos="fade-up" data-en="Moments We Cherish">Moments We Cherish</h3>
+
+    <div class="masonry-grid mt-4" id="masonryGrid">
+      <div class="masonry-item tall" data-aos="fade-up" data-aos-delay="0"><div class="ph"><i class="bi bi-image"></i></div></div>
+      <div class="masonry-item"      data-aos="fade-up" data-aos-delay="100"><div class="ph"><i class="bi bi-image"></i></div></div>
+      <div class="masonry-item"      data-aos="fade-up" data-aos-delay="200"><div class="ph"><i class="bi bi-image"></i></div></div>
+      <div class="masonry-item tall" data-aos="fade-up" data-aos-delay="300"><div class="ph"><i class="bi bi-image"></i></div></div>
+      <div class="masonry-item"      data-aos="fade-up" data-aos-delay="100"><div class="ph"><i class="bi bi-image"></i></div></div>
+      <div class="masonry-item tall" data-aos="fade-up" data-aos-delay="200"><div class="ph"><i class="bi bi-image"></i></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox-overlay" id="lightboxOverlay">
+  <span class="lightbox-close" id="lightboxClose">&times;</span>
+  <div class="lightbox-content"><i class="bi bi-image"></i></div>
+</div>
+
+<!-- ============ MUSIC PLAYER ============ -->
+<button class="music-btn" id="musicBtn" aria-label="Toggle music">
+  <i class="bi bi-music-note-beamed" id="musicIcon"></i>
+</button>
+<audio id="bgMusic" loop>
+  <source src="wedding.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer-section">
+  <div class="container text-center">
+    <div class="footer-floral">🌸 💕 🌸</div>
+    <h4 class="footer-names">Lakshmi <span class="nickname-tag">(Ashwini)</span> <span class="footer-heart">💕</span> Vikram</h4>
+    <p class="footer-date" data-kn="೨೫ ಅಕ್ಟೋಬರ್ ೨೦೨೬" data-en="25 October 2026">೨೫ ಅಕ್ಟೋಬರ್ ೨೦೨೬</p>
+    <p class="footer-venue">Lalita Bhadrakali Temple, Devatemane, Sirsi</p>
+    <div class="footer-quote-divider">🌺 ✿ 🌺</div>
+    <p class="footer-quote" data-kn="ನಿಮ್ಮ ಉಪಸ್ಥಿತಿಯೇ ಆಶೀರ್ವಾದ" data-en="Your Presence Is The Greatest Blessing">ನಿಮ್ಮ ಉಪಸ್ಥಿತಿಯೇ ಆಶೀರ್ವಾದ</p>
+    <p class="footer-credit"><b>Made with ❤️ by Bride's brother</b></p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
