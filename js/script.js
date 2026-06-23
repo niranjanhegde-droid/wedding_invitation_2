@@ -276,6 +276,35 @@ function initGallery() {
 }
 
 /* ===========================================================
+   13. COUPLE PHOTO — click-to-flip reveal placeholder text
+=========================================================== */
+function initCoupleCards() {
+  document.querySelectorAll('.couple-photo').forEach(photo => {
+    photo.style.cursor = 'pointer';
+    photo.title = 'Photo coming soon 🌸';
+
+    photo.addEventListener('click', () => {
+      const tip = photo.parentElement.querySelector('.photo-tip');
+      if (tip) { tip.remove(); return; }
+
+      const msg = document.createElement('p');
+      msg.className = 'photo-tip';
+      msg.textContent = '📸 Photo coming soon';
+      Object.assign(msg.style, {
+        color     : 'var(--rose-light)',
+        fontSize  : '.82rem',
+        marginTop : '.5rem',
+        fontFamily: 'var(--font-display)',
+        letterSpacing: '.04em',
+        animation : 'fadeInOut 2s ease-in-out forwards',
+      });
+      photo.insertAdjacentElement('afterend', msg);
+      setTimeout(() => msg.remove(), 2200);
+    });
+  });
+}
+
+/* ===========================================================
    7.  BACKGROUND MUSIC
 =========================================================== */
 function initMusic() {
