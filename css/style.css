@@ -435,58 +435,54 @@ body[data-lang="kn"] .section-title{ font-family:var(--font-kn); }
 .couple-role{ font-family:var(--font-kn); color:var(--rose); letter-spacing:.08em; text-transform:uppercase; font-size:.85rem; }
 .couple-connector{ font-size:3.5rem; animation:heartBeat 1.6s ease-in-out infinite; filter:drop-shadow(0 0 12px rgba(192,84,110,.35)); }
 /* ===========================================================
-   DETAILS
+   DETAILS — two grouped info boxes (no links/maps here)
 =========================================================== */
 .details-section{ background:var(--bg); }
-.detail-card{
+
+.detail-group-card{
   background:var(--card); border:1px solid var(--border-pink);
-  border-radius:18px; padding:2.4rem 1.5rem; text-align:center; height:100%;
+  border-radius:18px; padding:2.2rem 2rem; height:100%;
   box-shadow:0 4px 20px var(--shadow-pink);
   transition:transform .35s ease, border-color .35s ease, box-shadow .35s ease;
   position:relative; overflow:hidden;
 }
-.detail-card::before{
+.detail-group-card::before{
   content:''; position:absolute; top:0; left:0; right:0; height:3px;
   background:linear-gradient(90deg, var(--pink), var(--lavender));
 }
-.detail-card:hover{ transform:translateY(-8px); border-color:var(--rose-light); box-shadow:0 12px 36px var(--shadow-rose); }
-.detail-card i{ font-size:2rem; color:var(--rose-light); margin-bottom:1rem; display:block; }
-.detail-card h5{ font-family:var(--font-kn); color:var(--text); letter-spacing:.05em; margin-bottom:.5rem; }
-.detail-card p{ color:var(--text-soft); margin:0; font-family:var(--font-kn); }
-
-/* Reception card — clickable wrapper */
-.detail-card-link{
-  display:block; text-decoration:none; height:100%;
-}
-.detail-card-link .detail-card{ cursor:pointer; }
-.detail-card-link:hover .detail-card{
-  transform:translateY(-8px);
-  border-color:var(--rose-light);
+.detail-group-card:hover{
+  transform:translateY(-6px); border-color:var(--rose-light);
   box-shadow:0 12px 36px var(--shadow-rose);
 }
 
-.detail-venue-name{
-  margin-top:.4rem !important;
-  font-weight:600;
-  color:var(--rose) !important;
+.detail-group-header{
+  display:flex; align-items:center; gap:.7rem;
+  margin-bottom:1.4rem; padding-bottom:1rem;
+  border-bottom:1px dashed var(--border-pink);
+}
+.detail-group-header i{ font-size:1.6rem; color:var(--rose-light); }
+.detail-group-header h4{
+  font-family:var(--font-display); color:var(--text);
+  font-size:1.3rem; margin:0; letter-spacing:.03em;
 }
 
-.detail-map-tag{
-  display:inline-flex; align-items:center; gap:.35rem;
-  margin-top:1rem; padding:.4rem .9rem;
-  font-size:.78rem; letter-spacing:.04em; text-transform:uppercase;
-  color:var(--rose); border:1px solid var(--rose-light);
-  border-radius:30px; background:rgba(244,167,185,.12);
-  transition:background .3s ease, color .3s ease;
+.detail-row{
+  display:flex; justify-content:space-between; align-items:flex-start;
+  gap:1rem; padding:.6rem 0;
 }
-.detail-map-tag i{ font-size:.85rem; margin:0; color:var(--rose); }
-.detail-card-link:hover .detail-map-tag{
-  background:var(--rose-light); color:#fff;
+.detail-row + .detail-row{ border-top:1px solid rgba(0,0,0,.04); }
+.detail-label{
+  font-family:var(--font-kn); color:var(--rose);
+  letter-spacing:.05em; text-transform:uppercase; font-size:.78rem;
+  white-space:nowrap; padding-top:.15rem;
 }
-.detail-card-link:hover .detail-map-tag i{ color:#fff; }
+.detail-value{
+  font-family:var(--font-kn); color:var(--text-soft);
+  text-align:right; font-size:.95rem; line-height:1.5;
+}
 
 /* ===========================================================
-   VENUE
+   VENUE — two clickable venue boxes side by side
 =========================================================== */
 .venue-section{ background:linear-gradient(180deg, var(--bg-deep), var(--bg-lavender)); position:relative; overflow:hidden; }
 .venue-pattern{
@@ -496,11 +492,23 @@ body[data-lang="kn"] .section-title{ font-family:var(--font-kn); }
 }
 .venue-card{
   position:relative; background:var(--card);
-  border:1px solid var(--border-pink); border-radius:20px; padding:3rem 2rem;
-  box-shadow:0 8px 36px var(--shadow-pink);
+  border:1px solid var(--border-pink); border-radius:20px; padding:2.6rem 2rem;
+  box-shadow:0 8px 36px var(--shadow-pink); text-align:center; height:100%;
+  transition:transform .35s ease, box-shadow .35s ease;
 }
-.venue-icon{ font-size:2.4rem; color:var(--rose-light); margin-bottom:1rem; }
-.venue-address{ font-family:var(--font-body); font-size:1.2rem; color:var(--text-soft); line-height:1.8; }
+.venue-card:hover{ transform:translateY(-6px); box-shadow:0 14px 44px var(--shadow-rose); }
+.venue-icon{ font-size:2.2rem; color:var(--rose-light); margin-bottom:.6rem; }
+.venue-tag{
+  font-family:var(--font-display); color:var(--rose);
+  letter-spacing:.06em; text-transform:uppercase; font-size:.95rem; margin-bottom:1rem;
+}
+
+/* Address lines — replaces old single .venue-address block */
+.venue-address-line{
+  font-family:var(--font-body); font-size:1.1rem;
+  color:var(--text-soft); line-height:1.7; margin:0;
+}
+
 .btn-rose-outline{
   border:2px solid var(--rose-light); color:var(--rose); background:transparent;
   font-family:var(--font-display); letter-spacing:.08em; font-size:.85rem;
@@ -509,6 +517,14 @@ body[data-lang="kn"] .section-title{ font-family:var(--font-kn); }
 .btn-rose-outline:hover{
   background:linear-gradient(135deg, var(--rose-light), var(--rose));
   color:#fff; border-color:transparent; box-shadow:0 8px 28px var(--shadow-rose);
+}
+
+.map-wrapper{ position:relative; border-radius:14px; overflow:hidden; }
+.map-overlay{ position:absolute; inset:0; }
+
+@media (max-width:991px){
+  .detail-row{ flex-direction:column; gap:.2rem; }
+  .detail-value{ text-align:left; }
 }
 
 /* ===========================================================
@@ -602,4 +618,50 @@ a:focus-visible, button:focus-visible{ outline:2px solid var(--rose-light); outl
     inset:0;
     z-index:5;
     cursor:pointer;
+}
+.hero-bride-name,
+.hero-groom-name{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:baseline;
+
+    gap:10px;
+
+    margin:0;
+
+    flex-wrap:wrap;
+}
+
+.name-prefix{
+
+    font-family:var(--font-kn);
+
+    font-size:0.42em;
+
+    font-weight:600;
+
+    color:#C27A8A;
+
+    letter-spacing:.04em;
+
+    line-height:1;
+}
+
+.name-main{
+
+    font-family:var(--font-display);
+
+    font-size:1em;
+
+    font-weight:900;
+
+    color:#A64D79;
+
+    line-height:1.15;
+
+    text-shadow:
+        0 4px 12px rgba(166,77,121,.12);
 }
