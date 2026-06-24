@@ -99,45 +99,17 @@ function initParticles() {
 }
 
 /* ===========================================================
-   3.  NAVBAR — scroll shrink + active link highlight
+   3.  NAVBAR — scroll shrink only (no menu links to manage)
 =========================================================== */
 function initNavbar() {
-  const nav   = document.getElementById('mainNav');
-  const links = document.querySelectorAll('.nav-link[href^="#"]');
+  const nav = document.getElementById('mainNav');
   if (!nav) return;
 
-  /* Scroll shrink */
   const onScroll = () => {
     nav.classList.toggle('scrolled', window.scrollY > 60);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
-
-  /* Active section highlight via IntersectionObserver */
-  const sections = document.querySelectorAll('section[id], header[id]');
-
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        links.forEach(l => {
-          l.classList.toggle('active', l.getAttribute('href') === `#${e.target.id}`);
-        });
-      }
-    });
-  }, { rootMargin: '-40% 0px -55% 0px' });
-
-  sections.forEach(s => io.observe(s));
-
-  /* Smooth-close mobile menu on link click */
-  const collapseEl = document.getElementById('navMenu');
-  links.forEach(l => {
-    l.addEventListener('click', () => {
-      if (collapseEl && collapseEl.classList.contains('show')) {
-        const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseEl);
-        bsCollapse.hide();
-      }
-    });
-  });
 }
 
 /* ===========================================================
