@@ -251,7 +251,7 @@ function initGallery() {
    13. COUPLE PHOTO — click-to-flip reveal placeholder text
 =========================================================== */
 function initCoupleCards() {
-  document.querySelectorAll('.couple-photo').forEach(photo => {
+  document.querySelectorAll('.couple-photo-single').forEach(photo => {
     photo.style.cursor = 'pointer';
     photo.title = 'Photo coming soon 🌸';
 
@@ -528,7 +528,19 @@ function initVenueMap() {
   mapWrap.appendChild(iframe);
   venueCard.appendChild(mapWrap);
 }
+/* ===========================================================
+   FOOTER INVITATION ENVELOPE — click to reveal message
+=========================================================== */
+function initEnvelope() {
+  const box = document.getElementById('envelopeBox');
+  const msg = document.getElementById('envelopeMessage');
+  if (!box || !msg) return;
 
+  box.addEventListener('click', () => {
+    const isOpen = box.classList.toggle('opened');
+    msg.classList.toggle('show', isOpen);
+  });
+}
 /* ===========================================================
    BOOT
 =========================================================== */
@@ -548,4 +560,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initPetalTrail();
   initCoupleCards();
   initVenueMap();
+  initEnvelope();
 });
